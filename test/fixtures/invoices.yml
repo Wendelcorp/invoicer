@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  due: 2017-08-31
+  message: MyText
+  status: false
+
+two:
+  due: 2017-08-31
+  message: MyText
+  status: false

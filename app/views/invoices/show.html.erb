@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @invoice.due %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @invoice.message %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @invoice.status %>
+</p>
+
+<% @invoice.lines.each do |a| %>
+<li><%= a.description %> - <%= a.price %></li>
+<% end %>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>
