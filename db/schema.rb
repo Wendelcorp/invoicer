@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831151446) do
+ActiveRecord::Schema.define(version: 20170901181017) do
+
+  create_table "clients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "invoices", force: :cascade do |t|
     t.date     "due"
@@ -18,6 +26,8 @@ ActiveRecord::Schema.define(version: 20170831151446) do
     t.boolean  "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "client_id"
+    t.index ["client_id"], name: "index_invoices_on_client_id"
   end
 
   create_table "lines", force: :cascade do |t|
