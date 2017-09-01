@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :client_id %>
+    <%= select("invoice", "client_id", Client.all.collect {|c| [ c.name, c.id ] }, { include_blank: true }) %>
+  </div>
+
+  <div class="field">
     <%= f.label :message %>
     <%= f.text_area :message %>
   </div>
@@ -35,7 +40,7 @@
   <div class="links">
     <%= link_to_add_association 'add line', f, :lines %>
   </div>
-  
+
   <div class="actions">
     <%= f.submit %>
   </div>
