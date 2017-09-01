@@ -19,6 +19,7 @@
   <div class="field">
     <%= f.label :client_id %>
     <%= select("invoice", "client_id", Client.all.collect {|c| [ c.name, c.id ] }, { include_blank: true }) %>
+    <%= link_to "Add Client", new_client_path %>
   </div>
 
   <div class="field">
