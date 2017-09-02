@@ -63,6 +63,10 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    hashid-rails (1.0.0)
+      activerecord (>= 4.0)
+      hashids (~> 1.0)
+    hashids (1.0.4)
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -177,6 +181,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.2)
   devise
+  hashid-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'hashid-rails'
 gem 'devise'
 gem 'nested_scaffold'
 gem 'cocoon'
