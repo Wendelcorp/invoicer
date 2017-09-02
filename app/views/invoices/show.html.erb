@@ -25,5 +25,27 @@
 <li><%= a.description %> - <%= a.price %></li>
 <% end %>
 
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <% sum = 0 %>
+      <% price_array = @invoice.lines.map {|item| item.price} %>
+      <% amount = '%.2f' % price_array.inject(0){|sum,x| sum + x} %>
+      <span>Amount: <%= amount %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Invoice Payment"
+          data-amount= <%= amount.to_s.gsub!(/[^0-9A-Za-z]/, '') %>
+          data-locale="auto"></script>
+<% end %>
+
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |
 <%= link_to 'Back', invoices_path %>

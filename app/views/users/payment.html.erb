@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+
+<div class="row">
+  <div class="col-md-3">
+    <ul>
+      <li><%= link_to 'Payment Method', payment_method_path %></li>
+      <li><%= link_to 'Payout Method', payment_method_path %></li>
+      <li><%= link_to 'Notification Settings', payment_method_path %></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="card-details">
+      <%= form_tag('/add_card', method: 'post') %>
+      <label>Card Number</label><br>
+      <input type="text" name="number"><br>
+      <label>Expiration</label><br>
+      <input type="text" name="month" placeholder="MM">
+      <input type="text" name="year" placeholder="YY"><br>
+      <label>Name</label><br>
+      <input type="text" name="name"><br>
+      <label>CVV</label><br>
+      <input type="text" name="cvv"><br>
+
+        <% if current_user.stripe_id.blank? %>
+          <button>Add Card</button>
+        <% else %>
+          <button>Update Card</button>
+        <% end %>
+    </div>
+  </div>
+</div>
