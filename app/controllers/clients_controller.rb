@@ -14,7 +14,7 @@ class ClientsController < ApplicationController
 
   # GET /clients/new
   def new
-    @client = Client.new
+    @client = current_user.clients.build
   end
 
   # GET /clients/1/edit
@@ -24,7 +24,7 @@ class ClientsController < ApplicationController
   # POST /clients
   # POST /clients.json
   def create
-    @client = Client.new(client_params)
+    @client = current_user.clients.build(client_params)
 
     respond_to do |format|
       if @client.save

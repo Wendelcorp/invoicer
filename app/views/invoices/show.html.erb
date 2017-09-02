@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Client:</strong>
+  <%= Client.where(id: @invoice.client_id).first.name %>
+</p>
+
+<p>
   <strong>Message:</strong>
   <%= @invoice.message %>
 </p>

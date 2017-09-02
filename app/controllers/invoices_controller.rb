@@ -14,8 +14,8 @@ class InvoicesController < ApplicationController
 
   # GET /invoices/new
   def new
-    @invoice = Invoice.new
-    # 1.times {@invoice.lines.build}
+    @invoice = current_user.invoices.build
+    1.times {@invoice.lines.build}
   end
 
   # GET /invoices/1/edit
@@ -25,7 +25,7 @@ class InvoicesController < ApplicationController
   # POST /invoices
   # POST /invoices.json
   def create
-    @invoice = Invoice.new(invoice_params)
+    @invoice = current_user.invoices.build(invoice_params)
 
     respond_to do |format|
       if @invoice.save
