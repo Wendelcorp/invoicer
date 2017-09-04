@@ -1,4 +1,4 @@
-class AddClientToInvoices < ActiveRecord::Migration[5.0]
+class AddClientIdToInvoices < ActiveRecord::Migration[5.1]
   def change
     add_reference :invoices, :client, foreign_key: true
   end

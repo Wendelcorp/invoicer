@@ -29,5 +29,5 @@
 <br>
 
 <%= link_to 'New Invoice', new_invoice_path %>
-<%= link_to 'New Client', new_client_path %>
-<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+<%= link_to "Add Client", new_client_path %>
+<%= link_to 'Connect with Stripe', user_stripe_connect_omniauth_authorize_path %>
