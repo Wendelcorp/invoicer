@@ -10,6 +10,8 @@ class InvoicesController < ApplicationController
   # GET /invoices/1
   # GET /invoices/1.json
   def show
+    @calculated_amount = @invoice.lines.all.inject(0) {|sum,x| sum + x.price }
+    @amount = @calculated_amount.to_s.gsub!(/[^0-9A-Za-z]/, '')
   end
 
   # GET /invoices/new

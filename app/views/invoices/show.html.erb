@@ -38,13 +38,16 @@
       <% amount = '%.2f' % price_array.inject(0){|sum,x| sum + x} %>
       <span>Amount: <%= amount %></span>
     </label>
+    <%= hidden_field_tag(:amount, amount.to_s.gsub!(/[^0-9A-Za-z]/, '')) %>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Invoice Payment"
           data-amount= <%= amount.to_s.gsub!(/[^0-9A-Za-z]/, '') %>
-          data-locale="auto"></script>
+          data-locale="auto">
+
+  </script>
 <% end %>
 
 <%= link_to 'Edit', edit_invoice_path(@invoice) %> |
