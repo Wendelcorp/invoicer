@@ -39,6 +39,7 @@
       <span>Amount: <%= amount %></span>
     </label>
     <%= hidden_field_tag(:amount, amount.to_s.gsub!(/[^0-9A-Za-z]/, '')) %>
+    <%= hidden_field_tag(:invoice_id, @invoice.id) %>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
