@@ -4,9 +4,67 @@
     <h2>Send beautiful & easy-to-pay invoices right to your client’s inbox.</h2>
   </div>
 </div>
-<div class="row">
+<div class="row app-preview-parent">
   <div class="app-preview col-md-6 mr-auto ml-auto text-center">
-    <%= link_to image_tag("logomark.svg"), "http://www.mysite.com/", class: "navbar-brand footer-logo" %> <br>
+    <div class="app-preview-logo">
+    <%= link_to image_tag("logomark.svg"), "http://www.mysite.com/" %>
+    </div>
     <p>Let's work together again soon!</p>
+    <table class="table app-preview-table">
+      <tr>
+        <td class="text-left">Homepage Design</td>
+        <td class="text-right">$2,000.00</td>
+      </tr>
+      <tr>
+        <td class="text-left">Design Consulting</td>
+        <td class="text-right">$400.00</td>
+      </tr>
+      <tr>
+        <td class="text-left"></td>
+        <td class="text-right">+13% Tax</td>
+      </tr>
+    </table>
+    <div class="price">
+      $2714.00
+    </div>
+    <div class="app-preview-button">
+      <a class="my-button-primary" href="#">Pay Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="features col-md-8 ml-auto mr-auto text-center">
+  <div class="row">
+    <div class="col-md-6 feature">
+      <div class="feature-icon">
+        <%= image_tag("no-monthly-fees.svg") %>
+      </div>
+      <h3>No Monthly Fees</h3>
+      <p>Pay only $1 per invoice plus applicable
+transaction fees associated with your connected Stripe account.</p>
+    </div>
+    <div class="col-md-6 feature">
+      <div class="feature-icon">
+        <%= image_tag("flexible-payments.svg") %>
+      </div>
+      <h3>Flexible Payments</h3>
+      <p>Make payments easy for your clients with Stripe’s simple and painless checkout process.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 feature">
+      <div class="feature-icon">
+        <%= image_tag("organized-documents.svg") %>
+      </div>
+      <h3>Organized Documents</h3>
+      <p>Keep all of your invoices in one place. You can review past transactions and print PDF records at any time.</p>
+    </div>
+    <div class="col-md-6 feature">
+      <div class="feature-icon">
+        <%= image_tag("instant-payout.svg") %>
+      </div>
+      <h3>Instant Payout</h3>
+      <p>Client payments are deposited directly to your connected Stripe account for quick access to your earnings.</p>
+    </div>
   </div>
 </div>

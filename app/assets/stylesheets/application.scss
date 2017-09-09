@@ -17,8 +17,26 @@ h2 {
   font-weight: 400;
   font-size: 1em;
 }
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+}
+.app-preview-table {
+  width: 75%;
+  margin: 0 auto;
+}
 
-
+.my-button-primary {
+  background-color: #A9F489;
+  padding: 15px 50px;
+  border-radius: 8px;
+  color: black;
+}
 
 .content-container {
   max-width: 1200px;
@@ -60,6 +78,24 @@ h2 {
 .app-preview {
   height: 600px;
   border-radius: 10px;
-  border: 3px solid #A9F489;
+  border: 4px solid #A9F489;
   margin-bottom:10px;
+  background-color: #FCFCFC;
+}
+.app-preview-parent {
+  margin: 0 25px 100px;
+}
+.app-preview-logo {
+  margin: 50px 0 50px;
+}
+.app-preview-button {
+  margin: 50px 0;
+}
+.feature {
+  padding: 10px 60px;
+}
+.feature-icon {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  height: 60px;
 }
