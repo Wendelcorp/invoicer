@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'bootstrap', '~> 4.0.0.beta'
 gem 'omniauth-stripe-connect'
 gem 'devise'
 gem 'nested_scaffold'
