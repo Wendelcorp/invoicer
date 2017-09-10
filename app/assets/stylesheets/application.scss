@@ -36,6 +36,25 @@ p {
   padding: 15px 50px;
   border-radius: 8px;
   color: black;
+  display: inline-block;
+  margin-top: 10px;
+}
+.my-button-secondary {
+  border: 2px solid #A9F489;
+  padding: 13px 48px;
+  border-radius: 8px;
+  color: black;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.my-button-primary-button {
+  background-color: #A9F489;
+  padding: 10px 50px;
+  border-radius: 8px;
+  color: black;
+  border: none;
+  margin-top: 25px;
 }
 
 .content-container {
@@ -114,4 +133,36 @@ p {
   margin-bottom: 40px;
   margin-top: 40px;
   height: 60px;
+}
+
+
+
+
+.sign-in {
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 4px solid #A9F489;
+  background-color: #FCFCFC;
+  display: table;
+  padding: 60px 100px;
+}
+
+.session-heading {
+  margin-bottom: 50px;
+}
+// .session-field {
+//   width: 100%;
+// }
+
+// .invoice-table {
+//   max-width: 1000px;
+//   margin: 0 auto;
+// }
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-heading {
+  margin-bottom: 50px;  
 }
