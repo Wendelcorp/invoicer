@@ -1,12 +1,7 @@
 <div class="nested-fields">
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
+    <%= f.text_field :description, placeholder: "Description" %>
+    <%= f.text_field :price, placeholder: "Price" %>
   </div>
   <%= link_to_remove_association "remove line", f %>
 </div>
