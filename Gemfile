@@ -6,13 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 gem 'bootstrap', '~> 4.0.0.beta'
-gem 'omniauth-stripe-connect'
-gem 'devise'
-gem 'nested_scaffold'
-gem "cocoon"
-gem 'hashid-rails'
-gem "figaro"
-gem 'stripe'
+gem 'omniauth-stripe-connect', '~> 2.10.0'
+gem 'devise', '~> 4.3.0'
+gem 'nested_scaffold', '~> 1.0.0'
+gem "cocoon", '~> 1.2.10'
+gem 'hashid-rails', '~> 1.0.0'
+gem "figaro", '~> 1.1.1'
+gem 'stripe', '~> 3.3.1'
 
 gem 'rails', '~> 5.1.3'
 gem 'sqlite3'

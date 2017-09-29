@@ -1,6 +1,6 @@
 class Invoice < ApplicationRecord
   include Hashid::Rails
-  has_many :lines
+  has_many :lines, :dependent => :destroy
   belongs_to :user
   accepts_nested_attributes_for :lines, :reject_if => lambda { |a| a[:description].blank? || a[:price].blank? }, :allow_destroy => true
 end

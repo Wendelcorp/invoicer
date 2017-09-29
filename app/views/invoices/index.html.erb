@@ -1,7 +1,23 @@
+<div class="page-container">
 <p id="notice"><%= notice %></p>
 
-<div class="page-container">
+<% if current_user.uid.blank? %>
+
+  <h1 class="page-heading">Set Up Payments</h1>
+  <p>Set up your account to receive instant payments to continue.</p>
+  <%= link_to 'Connect with Stripe', user_stripe_connect_omniauth_authorize_path %>
+
+<% elsif current_user.clients.count < 1 %>
+
+  <h1 class="page-heading">Add a Client</h1>
+  <p>Add your first client to get started.</p>
+  <%= link_to "Add Client", new_client_path, :class => 'my-button-secondary' %>
+
+<% else %>
+
 <h1 class="page-heading">My Invoices</h1>
+
+<h2></h2>
 
 <table class="table invoice-table">
   <thead>
@@ -31,5 +47,6 @@
 
 <%= link_to 'New Invoice', new_invoice_path, :class => 'my-button-primary' %> <br>
 <%= link_to "Add Client", new_client_path, :class => 'my-button-secondary' %>
-<%= link_to 'Connect with Stripe', user_stripe_connect_omniauth_authorize_path %>
 </div>
+
+<% end %>
